@@ -1,0 +1,131 @@
+:root{
+    --blue-color: #0075ff ;
+    --blue-alt-color: #0d69d5 ;
+    --orange-color: #f59e0b ;
+    --grey-color: #888 ;
+    --red-color: #f44336 ;
+    --green-color: #22e55c ;
+
+}
+/*      margin and padding      */
+.m-20{
+    margin: 20px ;
+}
+.m-0{
+    margin: 0px;
+}
+.mt-0{
+    margin-top: 0%;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-15{
+    padding: 15px;
+}
+.p-20{
+    padding: 20px;
+}
+.pt-20{
+    padding: 20px;
+}
+
+/* backgrounds & colors */
+.bg-eee{
+    background-color: #eee;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-blue{
+    background-color: var(--blue-color);
+}
+.c-black{
+    color: black;
+}
+.c-grey{
+    color: var(--grey-color);
+}
+.c-white{
+    color: white;
+}
+/*      borders      */
+.rad-6{
+    border-radius: 6px;
+}
+.rad-10{
+    border-radius: 10px;
+}
+.rad-half{
+    border-radius: 50%;
+}
+
+/*      position      */
+.p-relative{
+    position: relative;
+}
+
+/*      display & flex      */
+.d-block{
+    display: block;
+}
+.d-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.d-grid{
+    display: grid;
+}
+.gap-20{
+    gap: 20px;  
+}
+@media (max-width:767px) {
+    .block-mobile{
+        display: block;
+    }
+    .hide-mobile{
+        display: none;
+    }
+}
+/*      text      */
+.txt-c{
+    text-align: center;
+}
+@media (max-width: 767px) { /* in mobile dimensions */
+    .txt-c-mobile{
+        text-align: center;
+    }
+}
+.fs-14{
+    font-size: 14px ;
+}
+/* width and height */
+.w-full{
+    width: 100%;  /* why is the width of the side bar reduced after this applied ? */
+}
+.w-fit{
+    width: fit-content;
+}
+/* components */
+.between-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

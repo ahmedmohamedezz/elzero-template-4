@@ -1,0 +1,11 @@
+- the side bar is relative , so it has a layer above the content layer
+
+- note the usage of the absolute ::before and ::after    , with the relative items
+
+- note the usage of the top , left , right , bottom   , with the transform:translateX(-50) and translateY() ==> left: 50%;    translateX(-50%);
+
+- if you gave a conainer border-raduis => make overflow: hidden , so that the content don't overflow above the border raduis
+
+- heirarchy of the overriding styles ?
+- psuedo elements & classes ?
+- -webkit ?
