@@ -248,3 +248,18 @@ ul{
     }
 }
 /* End Welcome */
+
+/* Start Quick-Draft */
+.quick-draft textarea{
+    resize: none;  /* to make it's size fixed */
+    min-height: 200px;
+}
+.quick-draft .save{
+    margin-left: auto;
+    transition: 0.3s;
+    cursor: pointer;      /* to display it as a clickable element */
+}
+.quick-draft .save:hover{
+    background-color: var(--blue-alt-color);
+}
+/* End Quick-Draft */

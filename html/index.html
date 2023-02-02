@@ -97,8 +97,11 @@
                 </div>
             </header>
             <!-- End Header -->
+            
             <h1 class="p-relative">Dashboard</h1> <!-- page title -->
             <div class="wrapper d-grid gap-20">
+
+                <!-- Start Dashboard -->
                 <!-- notice the rad-10 won't be applied to the upper corners unless we made overflow: hidden;    why??  -->
                 <!-- because the intro part is flows out of it's parent -->
                 <div class="welcome bg-white rad-10 txt-c-mobile block-mobile">
@@ -115,8 +118,21 @@
                         <div>10<span class="d-block c-grey mt-10 fs-14">Projects</span></div>
                         <div>$8080<span class="d-block c-grey mt-10 fs-14">Earned</span></div>
                     </div>
-                    <a href="profile.html" class="visit d-block bg-blue c-white fs-14 rad-6 w-fit">Profile</a>
+                    <a href="profile.html" class="visit d-block bg-blue c-white fs-14 w-fit btn-shape">Profile</a>
                 </div>
+                <!-- End Dashboard -->
+
+                <!-- Start Draft box -->
+                <div class="quick-draft bg-white p-20 rad-10">
+                    <h2 class="mt-0 mb-10">Quick Draft</h2>
+                    <p class="fs-15 c-grey mb-20 mt-0">Write A Draft For Your Ideas</p>
+                    <form>
+                        <input class="d-block bg-eee c-white w-full b-none mb-20 p-10 rad-6" type="text" placeholder="Title">
+                        <textarea class="d-block bg-eee c-white w-full b-none mb-20 p-10 rad-6" placeholder="Your Thought"></textarea>
+                        <input class="save d-block w-fit bg-blue c-white b-none fs-14 btn-shape" type="submit" value="save">
+                    </form>
+                </div>
+                <!-- End Draft box -->
             </div>
         </div>
     </div>
