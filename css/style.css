@@ -194,6 +194,7 @@ ul{
     grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 @media (max-width: 767px) {
     .wrapper{
@@ -378,3 +379,169 @@ ul{
     }
 }
 /* End News */
+
+/* Start Latest Tasks */
+.tasks .task-row:not(:last-of-type){
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tasks .done{
+    opacity: 0.3;
+}
+.tasks .done h3,
+.tasks .done p{
+    text-decoration: line-through;
+}
+
+.tasks .delete{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tasks .delete:hover{
+    color: var(--red-color);
+}
+/* End Latest Tasks */
+
+/* ------------- NO CSS FOR TOP SEARCH BOX ------------- */
+
+/* Start Latest Upload */
+.latest-uploads ul li:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.latest-uploads ul li img{
+    width: 40px;
+    height: 40px;
+}
+/* End Latest Upload */
+
+/* Start Project Progress box  */
+.last-project ul::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 11px;
+    background-color: var(--blue-color);
+}
+
+.last-project ul li::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    margin-right: 15px;
+    z-index: 1;
+}
+.last-project ul li.done::before{
+    background-color: var(--blue-color);
+}
+.last-project ul li.current::before{
+    animation: change-color 1.5s infinite alternate;
+    /* transition: 0.8s change-color; */
+}
+.last-project .launch-icon{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+    opacity: 0.5;
+}
+/* End Project Progress box  */
+
+/* Start Reminders */
+.reminders ul li .key{
+    width: 15px;
+    height: 15px;
+}
+.reminders ul li > .blue{
+    border-left: 2px solid var(--blue-color);
+}
+.reminders ul li > .green{
+    border-left: 2px solid var(--green-color);
+}
+.reminders ul li > .orange{
+    border-left: 2px solid var(--orange-color);
+}
+.reminders ul li > .red{
+    border-left: 2px solid var(--red-color);
+}
+/* End Reminders */
+
+/* Start Latest Post */
+.latest-post .avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.latest-post .content{
+    line-height: 1.8;
+    text-transform: capitalize;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+/* End Latest Post */
+
+/* Start Social Media */
+.social-media-stats .box{
+    padding-left: 70px;
+}
+.social-media-stats .box i{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 52px;
+    transition: 0.3s;
+    /* height: 100%; */
+}
+.social-media-stats i:hover{
+    transform: rotate(5deg);
+}
+.social-media-stats .twitter{
+    background-color: rgb(29 161 242 / 20%);
+    color: #1da1f2;
+}
+.social-media-stats .twitter i,
+.social-media-stats .twitter a{
+    background-color: #1da1f2;
+}
+.social-media-stats .facebook{
+    background-color:rgb(24 119 242 / 20%);
+    color: #1877f2;
+}
+.social-media-stats .facebook i,
+.social-media-stats .facebook a{
+    background-color: #1877f2;
+}
+.social-media-stats .youtube{
+    background-color: rgb(255 0 0 / 20%);
+    color: #ff0000;
+}
+.social-media-stats .youtube i,
+.social-media-stats .youtube a{
+    background-color: #ff0000;
+}
+.social-media-stats .linkedin{
+    background-color: rgb(0 119 181 / 20%);
+    color: #0077b5;
+}
+.social-media-stats .linkedin i,
+.social-media-stats .linkedin a{
+    background-color: #0077b5;
+}
+/* End Social Media */
+
+/* Start Animations */
+@keyframes change-color {
+    from{
+        background-color: var(--blue-alt-color);
+    }   
+    to{
+        background-color: white;
+    } 
+}
+/* End Animations */
