@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>Template 4</title>
 </head>
+
 <body>
     <div class="page d-flex">
-      <!-- we gave the side bar p-relative , so that it's layer it higher than the content section layer ( the glow appears as an evidence ) -->
-        <div class="side-bar bg-white p-20 p-relative"> 
+        <!-- we gave the side bar p-relative , so that it's layer it higher than the content section layer ( the glow appears as an evidence ) -->
+        <div class="side-bar bg-white p-20 p-relative">
             <!-- h3 is p-relative & ::before & ::after are absolute -->
             <h3 class="p-relative txt-c mt-0">Ahmed</h3>
             <ul>
@@ -29,12 +31,12 @@
                     </a>
                 </li>
                 <li>
-                  <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
-                      <!--this icon has the fixed width class -->
-                      <i class="fa-brands fa-connectdevelop"></i>
-                      <span>Settings</span>
-                  </a>
-              </li>
+                    <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+                        <!--this icon has the fixed width class -->
+                        <i class="fa-brands fa-connectdevelop"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
                 <li>
                     <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
                         <!--this icon has the fixed width class -->
@@ -97,7 +99,7 @@
                 </div>
             </header>
             <!-- End Header -->
-            
+
             <h1 class="p-relative">Dashboard</h1> <!-- page title -->
             <div class="wrapper d-grid gap-20">
 
@@ -127,14 +129,143 @@
                     <h2 class="mt-0 mb-10">Quick Draft</h2>
                     <p class="fs-15 c-grey mb-20 mt-0">Write A Draft For Your Ideas</p>
                     <form>
-                        <input class="d-block bg-eee c-white w-full b-none mb-20 p-10 rad-6" type="text" placeholder="Title">
-                        <textarea class="d-block bg-eee c-white w-full b-none mb-20 p-10 rad-6" placeholder="Your Thought"></textarea>
-                        <input class="save d-block w-fit bg-blue c-white b-none fs-14 btn-shape" type="submit" value="save">
+                        <input class="d-block bg-eee c-white w-full b-none mb-20 p-10 rad-6" type="text"
+                            placeholder="Title">
+                        <textarea class="d-block bg-eee c-white w-full b-none mb-20 p-10 rad-6"
+                            placeholder="Your Thought"></textarea>
+                        <input class="save d-block w-fit bg-blue c-white b-none fs-14 btn-shape" type="submit"
+                            value="save">
                     </form>
                 </div>
                 <!-- End Draft box -->
+
+                <!-- Start Targets box -->
+                <div class="targets p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10">Yearly Targets</h2>
+                    <p class="c-grey mt-0 mb-20 fs-15">Targets Of The Year</p>
+                    <!-- d-flex align-center ==> can be assigned to the target row , or make it center & give -->
+                    <!-- the details part the remaining space (flex: 1;) -->
+                    <div class="target-row center-flex mb-20 blue">
+                        <div class="icon center-flex">
+                            <i class="fa fa-dollar-sign fa-lg c-blue"></i>
+                        </div>
+                        <div class="details">
+                            <span class="c-grey fs-14">Money</span>
+                            <span class="fw-bold d-block mt-5 mb-10">$55.555</span>
+                            <div class="progress p-relative">
+                                <!-- the percentage shouldn't be static in real application => js  -->
+                                <span class="bg-blue blue" style="width: 80%;">
+                                    <span class="bg-blue c-white rad-6">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="target-row center-flex mb-20 orange">
+                        <div class="icon center-flex">
+                            <i class="fa fa-code fa-lg c-orange"></i>
+                        </div>
+                        <div class="details">
+                            <span class="c-grey fs-14">Projects</span>
+                            <span class="fw-bold d-block mt-5 mb-10">23</span>
+                            <div class="progress p-relative">
+                                <!-- the percentage shouldn't be static in real application => js  -->
+                                <span class="bg-orange orange" style="width: 55%;">
+                                    <span class="bg-orange c-white rad-6">55%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="target-row center-flex mb-20 green">
+                        <div class="icon center-flex">
+                            <i class="fa fa-user fa-lg c-green"></i>
+                        </div>
+                        <div class="details">
+                            <span class="c-grey fs-14">Teem</span>
+                            <span class="fw-bold d-block mt-5 mb-10">12</span>
+                            <div class="progress p-relative">
+                                <!-- the percentage shouldn't be static in real application => js  -->
+                                <span class="bg-green green" style="width: 75%;">
+                                    <span class="bg-green c-white rad-6">75%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Targets box -->
+
+                <!-- Start Tickets box -->
+                <div class="tickets bg-white p-20 rad-10">
+                    <h2 class="mt-0 mb-10">Tickets Statistics</h2>
+                    <p class="mt-0 mb-20 c-grey fs-15">Everything About Support Tickets</p>
+                    <div class="d-flex gap-20 txt-c f-wrap">
+                        <div class="box rad-10 p-20 fs-13">
+                            <i class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"></i>
+                            <span class="d-block fw-bold fs-25 c-black mb-5">2500</span>
+                            <span class="c-grey fs-14">Total</span>
+                        </div>
+                        <div class="box rad-10 p-20 fs-13">
+                            <i class="fa-solid fa-spinner fa-2x mb-10 c-blue"></i>
+                            <span class="d-block fw-bold fs-25 c-black mb-5">500</span>
+                            <span class="c-grey fs-14">Pending</span>
+                        </div>
+                        <div class="box rad-10 p-20 fs-13">
+                            <i class="fa-regular fa-circle-check fa-2x mb-10 c-green"></i>
+                            <span class="d-block fw-bold fs-25 c-black mb-5">1900</span>
+                            <span class="c-grey fs-14">Closed</span>
+                        </div>
+                        <div class="box rad-10 p-20 fs-13">
+                            <i class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-red"></i>
+                            <span class="d-block fw-bold fs-25 c-black mb-5">100</span>
+                            <span class="c-grey fs-14">Deleted</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Tickets box -->
+
+                <!-- Start News box -->
+                <div class="news bg-white p-20 rad-10 txt-c-mobile">
+                    <h2 class="mt-0 mb-20">Latest News</h2>
+                    <div class="news-row d-flex align-center block-mobile">
+                        <img src="../imgs/news-1.png" alt="news-img">
+                        <div class="info">
+                            <h3>Created SASS Section</h3>
+                            <p class="mt-0 fs-14 c-grey">New SASS Examples & Tutorials</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-13 label">3 Days Ago</div>
+                    </div>
+                    <div class="news-row d-flex align-center block-mobile">
+                        <img src="../imgs/news-2.jpg" alt="news-img">
+                        <div class="info">
+                            <h3>Changed The Design</h3>
+                            <p class="mt-0 fs-14 c-grey">A New Brand Website Design</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-13 label">5 Days Ago</div>
+                    </div>
+                    <div class="news-row d-flex align-center block-mobile">
+                        <img src="../imgs/news-3.jpg" alt="news-img">
+                        <div class="info">
+                            <h3>Team Increased</h3>
+                            <p class="mt-0 fs-14 c-grey">3 Developers Joined The Team</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-13 label">7 Days Ago</div>
+                    </div>
+                    <div class="news-row d-flex align-center block-mobile">
+                        <img src="../imgs/news-4.png" alt="news-img">
+                        <div class="info">
+                            <h3>Added Payment Gateway</h3>
+                            <p class="mt-0 fs-14 c-grey">Many New Payment Gateways Added</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-13 label">9 Days Ago</div>
+                    </div>
+                </div>
+                <!-- End News box -->
+
+                
             </div>
         </div>
     </div>
 </body>
+
 </html>

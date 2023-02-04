@@ -5,6 +5,8 @@
 - note the usage of the top , left , right , bottom   , with the transform:translateX(-50) and translateY() ==> left: 50%;    translateX(-50%);
 
 - if you gave a conainer border-raduis => make overflow: hidden , so that the content don't overflow above the border raduis
+ 
+- border-top in an empty element will look like an arrow it the element is squared
 
 - heirarchy of the overriding styles ?
 - psuedo elements & classes ?

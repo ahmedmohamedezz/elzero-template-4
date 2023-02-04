@@ -263,3 +263,118 @@ ul{
     background-color: var(--blue-alt-color);
 }
 /* End Quick-Draft */
+
+/* Start Targets */
+.targets .target-row .icon{
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+.targets .details{
+    flex: 1; 
+}
+.targets .details .progress{
+    height: 4px;
+}
+.targets .details .progress > span{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%; /* it won't be visible without the height*/
+}
+.targets .details .progress > span span{
+    position: absolute;
+    bottom: 15px;
+    right: -16px;
+    padding: 2px 5px;
+    font-size: 13px;
+}
+.targets .details .progress > .blue span::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform:translateX(-50%) ;
+    border-color: transparent ;
+    border-width: 5px;
+    border-style: solid;
+    border-top-color: var(--blue-color);
+}
+.blue .icon,
+.blue .progress{
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.targets .details .progress > .green span::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform:translateX(-50%) ;
+    border-color: transparent ;
+    border-width: 5px;
+    border-style: solid;
+    border-top-color: var(--green-color);
+}
+.green .icon,
+.green .progress{
+    background-color: rgb(34 229 92 / 20%);
+}
+
+.targets .details .progress > .orange span::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform:translateX(-50%) ;
+    border-color: transparent ;
+    border-width: 5px;
+    border-style: solid;
+    border-top-color: var(--orange-color);
+}
+.orange .icon,
+.orange .progress{
+    background-color:  rgb(245 158 11 / 20%);
+}
+/* End Targets */
+
+/* Start tickets */
+.tickets .box{
+    border: 1px solid #ccc;
+    width: calc(50% - 10px); /* put spaces in calc() to not write -ve 10px by mistake */
+}
+@media (max-width: 767px) {
+    .tickets .box{
+        border: 1px solid #ccc;
+        width: 100% ;
+    }   
+}
+/* End tickets */
+
+/* Start News */
+.news .news-row:not(:last-of-type){
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.news-row img{
+    width: 100px;
+    border-radius: 6px;
+    margin-right: 15px;
+    border: 2px solid #eee;
+}
+.news-row .info{
+    flex: 1;
+}
+.news-row h3{
+    margin: 0px 0px 5px;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    .news-row .label{
+        margin: 10px auto;
+        width: fit-content;
+    }
+}
+/* End News */
