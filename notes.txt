@@ -8,6 +8,8 @@
  
 - border-top in an empty element will look like an arrow it the element is squared
 
+- if i want something to take all the remaining space ==> flex: 1;
+
 - heirarchy of the overriding styles ?
 - psuedo elements & classes ?
 - -webkit ?

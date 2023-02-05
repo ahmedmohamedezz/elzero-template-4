@@ -535,6 +535,50 @@ ul{
 }
 /* End Social Media */
 
+
+/* Start Projects Table */
+.projects .resp-table{
+    /* if the size of the table is greater than vp => scroll to see it */
+    overflow-x: auto;
+}
+.projects table{
+    min-width: 1150px;
+    /* to remove the default spaces in the between the cells */
+    border-spacing: 0px;
+}
+.projects thead{
+    background-color: #eee;
+}
+.projects td,
+.projects th{
+    padding: 15px;
+}
+.projects tbody td{
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    transition: 0.3s;
+}
+.projects tbody td:last-child{
+    border-right: 1px solid #eee;
+}
+.projects tbody tr:hover td{
+    background-color: #faf7f7;
+}
+.projects .resp-table tr img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+    background-color: white;
+}
+.projects .resp-table tr img:not(:first-child){
+    margin-left: -20px;
+}
+.projects .label{
+    font-size: 13px;
+}
+/* End Projects Table */
+
 /* Start Animations */
 @keyframes change-color {
     from{
