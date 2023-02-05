@@ -1,141 +1,172 @@
-:root{
-    --blue-color: #0075ff ;
-    --blue-alt-color: #0d69d5 ;
-    --orange-color: #f59e0b ;
-    --grey-color: #888 ;
-    --red-color: #f44336 ;
-    --green-color: #22e55c ;
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --grey-color: #888;
+    --red-color: #f44336;
+    --green-color: #22e55c;
 
 }
+
 /*      prefixes      */
-*{
+* {
     /* this property includes the padding and border of the elements in the element width and height */
     box-sizing: border-box;
 }
-*:focus{
+
+*:focus {
     /* this property clears the outline of the focus elements like : input fields and forms */
     outline: none;
 }
-body{
+
+body {
     margin: 0%;
     font-family: 'Open Sans', sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 /* scrollbar width */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 15px;
 }
+
 /* scrollbar background color */
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: white;
 }
+
 /* scroll color */
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--blue-color);
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--blue-alt-color);
 }
-.page{
+
+.page {
     background-color: #f1f5f9;
     min-height: 100vh;
 }
-ul{
+
+ul {
     list-style: none;
     padding: 0%;
 }
 
 /*     side bar     */
-.side-bar{
-    width: 250px ;
+.side-bar {
+    width: 250px;
     box-shadow: 0 0 10px #ddd;
 }
-.side-bar > h3{
-    margin-bottom: 50px ;
+
+.side-bar>h3 {
+    margin-bottom: 50px;
 }
+
 .side-bar>h3::before,
-.side-bar>h3::after{
+.side-bar>h3::after {
     content: "";
-    background-color: black; 
-    position: absolute; /* if not specified the line won't appear , notice that the h3 is relative*/
+    background-color: black;
+    position: absolute;
+    /* if not specified the line won't appear , notice that the h3 is relative*/
     left: 50%;
     transform: translateX(-50%);
 }
 
-.side-bar>h3::before{
-    width: 80px ;
-    height: 2px ;
+.side-bar>h3::before {
+    width: 80px;
+    height: 2px;
     /* we should we use all of these ? can we remove translate or left ? */
-    bottom: -20px ;
+    bottom: -20px;
 }
-.side-bar>h3::after{
+
+.side-bar>h3::after {
     width: 12px;
     height: 12px;
     border: 4px solid white;
     border-radius: 50%;
     bottom: -29px;
 }
-.side-bar ul li a{
-    transition: 0.3s ; /* smooth hover */
+
+.side-bar ul li a {
+    transition: 0.3s;
+    /* smooth hover */
     margin-bottom: 5px;
 }
+
 .side-bar ul li a:hover,
-.side-bar ul li a.active{
-    background-color: #f6f6f6 ;
+.side-bar ul li a.active {
+    background-color: #f6f6f6;
 }
-.side-bar ul li a span{
+
+.side-bar ul li a span {
     margin-left: 10px;
-    font-size: 14px;  /* by default = 14px */ 
+    font-size: 14px;
+    /* by default = 14px */
 }
+
 @media (max-width: 767px) {
-    .side-bar{ 
-        width: 58px ;
+    .side-bar {
+        width: 58px;
         padding: 10px;
     }
-    .side-bar > h3{
+
+    .side-bar>h3 {
         font-size: 13px;
-        margin-bottom: 15px ;
+        margin-bottom: 15px;
     }
+
     .side-bar>h3::before,
-    .side-bar>h3::after{
+    .side-bar>h3::after {
         display: none;
     }
-    .side-bar ul li a{
-        transition: 0.3s ; /* smooth hover */
+
+    .side-bar ul li a {
+        transition: 0.3s;
+        /* smooth hover */
         margin-bottom: 5px;
     }
+
     .side-bar ul li a:hover,
-    .side-bar ul li a.active{
-        background-color: #f6f6f6 ;
+    .side-bar ul li a.active {
+        background-color: #f6f6f6;
     }
-    .side-bar ul li a span{
+
+    .side-bar ul li a span {
         display: none;
     }
 }
+
 /*     end side bar     */
 
 
 /* Start Content */
-.content{
+.content {
     /* to not let any scroll bar appears */
     overflow: hidden;
 }
+
 /* .head .search::before */
-.head .search > i{
+.head .search>i {
     font-family: var(--fa-style-family-classic);
     /* content: "\e2ca" ; magnifying glass , why it's not added through css ?*/
-    font-weight: 900;  /* is this property has a meaning ? */
-    font-size: 14px ; /* size of the icon */
-    color: var(--grey-color) ;
+    font-weight: 900;
+    /* is this property has a meaning ? */
+    font-size: 14px;
+    /* size of the icon */
+    color: var(--grey-color);
     position: absolute;
     left: 15px;
     /* why top & transform translate are used together ? */
     top: 50%;
     transform: translateY(-50%);
 }
-.head .search input{
+
+.head .search input {
     border: 1px solid #ccc;
     border-radius: 10px;
     width: 160px;
@@ -143,15 +174,18 @@ ul{
     padding-left: 30px;
     transition: width 0.3s;
 }
-.head .search input:focus{
+
+.head .search input:focus {
     /* if you tried to chagne the outline color , nothing happens becuase this property overrided by the * selector */
     width: 200px;
 }
-.head .search input:focus::placeholder{
+
+.head .search input:focus::placeholder {
     /* same as opacity=0           color: transparent; */
     opacity: 0;
 }
-.head .icons .notification::before{
+
+.head .icons .notification::before {
     content: "";
     position: absolute;
     width: 10px;
@@ -161,263 +195,313 @@ ul{
     top: -5px;
     right: -5px;
 }
-.head .icons img{
+
+.head .icons img {
     width: 30px;
     height: 30px;
     margin-left: 15px;
-    border-radius: 50%; /* to make it rounded */
+    border-radius: 50%;
+    /* to make it rounded */
 }
-.page h1{
+
+.page h1 {
     margin: 20px 20px 40px;
 }
+
 .page h1::before,
-.page h1::after{
-    content: ""; /* if not specified , nothing appears */
+.page h1::after {
+    content: "";
+    /* if not specified , nothing appears */
     height: 3px;
     position: absolute;
     bottom: -10px;
     left: 0px;
     border-radius: 6px;
 }
-.page h1::before{
+
+.page h1::before {
     background-color: white;
     width: 120px;
 }
-.page h1::after{
+
+.page h1::after {
     background-color: black;
     width: 50px;
 }
+
 /* End Content */
 
 /* Start wrapper */
-.wrapper{
-    grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
 @media (max-width: 767px) {
-    .wrapper{
+    .wrapper {
         grid-template-columns: minmax(200px, 1fr);
         margin-left: 10px;
         margin-right: 10px;
     }
 }
+
 /* End wrapper */
 
 /* Start Welcome */
-.welcome{
+.welcome {
     overflow: hidden;
 }
-.welcome .intro img{
-    width: 200px; /* does the browser config. the height ? both change together */
+
+.welcome .intro img {
+    width: 200px;
+    /* does the browser config. the height ? both change together */
     margin-bottom: -10px;
 }
-.welcome .body{
+
+.welcome .body {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
-.welcome .avatar{
+
+.welcome .avatar {
     width: 64px;
     height: 64px;
-    padding: 2px; /* changes the size of the img */
+    padding: 2px;
+    /* changes the size of the img */
     border: 2px solid white;
     border-radius: 50%;
     margin-top: -32px;
     margin-left: 20px;
     box-shadow: 0px 0px 5px #ddd;
 }
-.welcome .body > div{
+
+.welcome .body>div {
     flex: 1;
 }
-.welcome .visit{
+
+.welcome .visit {
     margin: 0px 15px 15px auto;
     transition: 0.3s;
 }
-.welcome .visit:hover{
+
+.welcome .visit:hover {
     background-color: var(--blue-alt-color);
 }
+
 @media (max-width: 767px) {
-    .welcome .intro{
+    .welcome .intro {
         padding-bottom: 30px;
     }
-    .welcome .avatar{
+
+    .welcome .avatar {
         margin-left: 0px;
     }
-    .welcome .body > div:not(:last-child){  /* all except the last-child */
+
+    .welcome .body>div:not(:last-child) {
+        /* all except the last-child */
         margin-bottom: 20px;
     }
 }
+
 /* End Welcome */
 
 /* Start Quick-Draft */
-.quick-draft textarea{
-    resize: none;  /* to make it's size fixed */
+.quick-draft textarea {
+    resize: none;
+    /* to make it's size fixed */
     min-height: 200px;
 }
-.quick-draft .save{
+
+.quick-draft .save {
     margin-left: auto;
     transition: 0.3s;
-    cursor: pointer;      /* to display it as a clickable element */
+    cursor: pointer;
+    /* to display it as a clickable element */
 }
-.quick-draft .save:hover{
+
+.quick-draft .save:hover {
     background-color: var(--blue-alt-color);
 }
+
 /* End Quick-Draft */
 
 /* Start Targets */
-.targets .target-row .icon{
+.targets .target-row .icon {
     width: 80px;
     height: 80px;
     margin-right: 15px;
 }
-.targets .details{
-    flex: 1; 
+
+.targets .details {
+    flex: 1;
 }
-.targets .details .progress{
+
+.targets .details .progress {
     height: 4px;
 }
-.targets .details .progress > span{
+
+.targets .details .progress>span {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100%; /* it won't be visible without the height*/
+    height: 100%;
+    /* it won't be visible without the height*/
 }
-.targets .details .progress > span span{
+
+.targets .details .progress>span span {
     position: absolute;
     bottom: 15px;
     right: -16px;
     padding: 2px 5px;
     font-size: 13px;
 }
-.targets .details .progress > .blue span::after{
+
+.targets .details .progress>.blue span::after {
     content: "";
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform:translateX(-50%) ;
-    border-color: transparent ;
+    transform: translateX(-50%);
+    border-color: transparent;
     border-width: 5px;
     border-style: solid;
     border-top-color: var(--blue-color);
 }
+
 .blue .icon,
-.blue .progress{
+.blue .progress {
     background-color: rgb(0 117 255 / 20%);
 }
 
-.targets .details .progress > .green span::after{
+.targets .details .progress>.green span::after {
     content: "";
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform:translateX(-50%) ;
-    border-color: transparent ;
+    transform: translateX(-50%);
+    border-color: transparent;
     border-width: 5px;
     border-style: solid;
     border-top-color: var(--green-color);
 }
+
 .green .icon,
-.green .progress{
+.green .progress {
     background-color: rgb(34 229 92 / 20%);
 }
 
-.targets .details .progress > .orange span::after{
+.targets .details .progress>.orange span::after {
     content: "";
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform:translateX(-50%) ;
-    border-color: transparent ;
+    transform: translateX(-50%);
+    border-color: transparent;
     border-width: 5px;
     border-style: solid;
     border-top-color: var(--orange-color);
 }
+
 .orange .icon,
-.orange .progress{
-    background-color:  rgb(245 158 11 / 20%);
+.orange .progress {
+    background-color: rgb(245 158 11 / 20%);
 }
+
 /* End Targets */
 
 /* Start tickets */
-.tickets .box{
+.tickets .box {
     border: 1px solid #ccc;
-    width: calc(50% - 10px); /* put spaces in calc() to not write -ve 10px by mistake */
+    width: calc(50% - 10px);
+    /* put spaces in calc() to not write -ve 10px by mistake */
 }
+
 @media (max-width: 767px) {
-    .tickets .box{
+    .tickets .box {
         border: 1px solid #ccc;
-        width: 100% ;
-    }   
+        width: 100%;
+    }
 }
+
 /* End tickets */
 
 /* Start News */
-.news .news-row:not(:last-of-type){
+.news .news-row:not(:last-of-type) {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
-.news-row img{
+
+.news-row img {
     width: 100px;
     border-radius: 6px;
     margin-right: 15px;
     border: 2px solid #eee;
 }
-.news-row .info{
+
+.news-row .info {
     flex: 1;
 }
-.news-row h3{
+
+.news-row h3 {
     margin: 0px 0px 5px;
     font-size: 16px;
 }
 
 @media (max-width: 767px) {
-    .news-row .label{
+    .news-row .label {
         margin: 10px auto;
         width: fit-content;
     }
 }
+
 /* End News */
 
 /* Start Latest Tasks */
-.tasks .task-row:not(:last-of-type){
+.tasks .task-row:not(:last-of-type) {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
 
-.tasks .done{
+.tasks .done {
     opacity: 0.3;
 }
+
 .tasks .done h3,
-.tasks .done p{
+.tasks .done p {
     text-decoration: line-through;
 }
 
-.tasks .delete{
+.tasks .delete {
     cursor: pointer;
     transition: 0.3s;
 }
-.tasks .delete:hover{
+
+.tasks .delete:hover {
     color: var(--red-color);
 }
+
 /* End Latest Tasks */
 
 /* ------------- NO CSS FOR TOP SEARCH BOX ------------- */
 
 /* Start Latest Upload */
-.latest-uploads ul li:not(:last-child){
+.latest-uploads ul li:not(:last-child) {
     border-bottom: 1px solid #eee;
 }
-.latest-uploads ul li img{
+
+.latest-uploads ul li img {
     width: 40px;
     height: 40px;
 }
+
 /* End Latest Upload */
 
 /* Start Project Progress box  */
-.last-project ul::before{
+.last-project ul::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -426,7 +510,7 @@ ul{
     background-color: var(--blue-color);
 }
 
-.last-project ul li::before{
+.last-project ul li::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -437,60 +521,72 @@ ul{
     margin-right: 15px;
     z-index: 1;
 }
-.last-project ul li.done::before{
+
+.last-project ul li.done::before {
     background-color: var(--blue-color);
 }
-.last-project ul li.current::before{
+
+.last-project ul li.current::before {
     animation: change-color 1.5s infinite alternate;
     /* transition: 0.8s change-color; */
 }
-.last-project .launch-icon{
+
+.last-project .launch-icon {
     position: absolute;
     bottom: 0px;
     right: 0px;
     width: 200px;
     opacity: 0.5;
 }
+
 /* End Project Progress box  */
 
 /* Start Reminders */
-.reminders ul li .key{
+.reminders ul li .key {
     width: 15px;
     height: 15px;
 }
-.reminders ul li > .blue{
+
+.reminders ul li>.blue {
     border-left: 2px solid var(--blue-color);
 }
-.reminders ul li > .green{
+
+.reminders ul li>.green {
     border-left: 2px solid var(--green-color);
 }
-.reminders ul li > .orange{
+
+.reminders ul li>.orange {
     border-left: 2px solid var(--orange-color);
 }
-.reminders ul li > .red{
+
+.reminders ul li>.red {
     border-left: 2px solid var(--red-color);
 }
+
 /* End Reminders */
 
 /* Start Latest Post */
-.latest-post .avatar{
+.latest-post .avatar {
     width: 48px;
     height: 48px;
     border-radius: 50%;
 }
-.latest-post .content{
+
+.latest-post .content {
     line-height: 1.8;
     text-transform: capitalize;
     border-top: 2px solid #eee;
     border-bottom: 2px solid #eee;
 }
+
 /* End Latest Post */
 
 /* Start Social Media */
-.social-media-stats .box{
+.social-media-stats .box {
     padding-left: 70px;
 }
-.social-media-stats .box i{
+
+.social-media-stats .box i {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -498,94 +594,338 @@ ul{
     transition: 0.3s;
     /* height: 100%; */
 }
-.social-media-stats i:hover{
+
+.social-media-stats i:hover {
     transform: rotate(5deg);
 }
-.social-media-stats .twitter{
+
+.social-media-stats .twitter {
     background-color: rgb(29 161 242 / 20%);
     color: #1da1f2;
 }
+
 .social-media-stats .twitter i,
-.social-media-stats .twitter a{
+.social-media-stats .twitter a {
     background-color: #1da1f2;
 }
-.social-media-stats .facebook{
-    background-color:rgb(24 119 242 / 20%);
+
+.social-media-stats .facebook {
+    background-color: rgb(24 119 242 / 20%);
     color: #1877f2;
 }
+
 .social-media-stats .facebook i,
-.social-media-stats .facebook a{
+.social-media-stats .facebook a {
     background-color: #1877f2;
 }
-.social-media-stats .youtube{
+
+.social-media-stats .youtube {
     background-color: rgb(255 0 0 / 20%);
     color: #ff0000;
 }
+
 .social-media-stats .youtube i,
-.social-media-stats .youtube a{
+.social-media-stats .youtube a {
     background-color: #ff0000;
 }
-.social-media-stats .linkedin{
+
+.social-media-stats .linkedin {
     background-color: rgb(0 119 181 / 20%);
     color: #0077b5;
 }
+
 .social-media-stats .linkedin i,
-.social-media-stats .linkedin a{
+.social-media-stats .linkedin a {
     background-color: #0077b5;
 }
+
 /* End Social Media */
 
 
 /* Start Projects Table */
-.projects .resp-table{
+.projects .resp-table {
     /* if the size of the table is greater than vp => scroll to see it */
     overflow-x: auto;
 }
-.projects table{
+
+.projects table {
     min-width: 1150px;
     /* to remove the default spaces in the between the cells */
     border-spacing: 0px;
 }
-.projects thead{
+
+.projects thead {
     background-color: #eee;
 }
+
 .projects td,
-.projects th{
+.projects th {
     padding: 15px;
 }
-.projects tbody td{
+
+.projects tbody td {
     border-bottom: 1px solid #eee;
     border-left: 1px solid #eee;
     transition: 0.3s;
 }
-.projects tbody td:last-child{
+
+.projects tbody td:last-child {
     border-right: 1px solid #eee;
 }
-.projects tbody tr:hover td{
+
+.projects tbody tr:hover td {
     background-color: #faf7f7;
 }
-.projects .resp-table tr img{
+
+.projects .resp-table tr img {
     border-radius: 50%;
     width: 32px;
     height: 32px;
     padding: 2px;
     background-color: white;
 }
-.projects .resp-table tr img:not(:first-child){
+
+.projects .resp-table tr img:not(:first-child) {
     margin-left: -20px;
 }
-.projects .label{
+
+.projects .label {
     font-size: 13px;
 }
+
 /* End Projects Table */
+
+
+/* Start Settings */
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .settings-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+.settings-page .close-message{
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 150px;
+}
+
+/*  */
+.settings-page .email{
+    display: inline-flex;
+    width: calc(100% - 80px);
+}
+.settings-page :disabled{
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+/*  */
+.settings-page .sec-box{
+    padding-bottom: 15px;
+}
+.settings-page .sec-box .button{
+    transition: 0.3s ;
+}
+.settings-page .sec-box .button:hover{
+    background-color: var(--blue-alt-color);
+}
+.settings-page .sec-box:not(:last-of-type){  
+    border-bottom: 1px solid #eee;
+}
+/*  */
+.settings-page .social-boxes i{
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;  /* right corners */
+    transition: 0.3s;
+}
+.settings-page .social-boxes input{
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    border-radius: 0 6px 6px 0;
+}
+.settings-page .social-boxes > div:focus-within i{
+    /* when we focus on this div , the i within it should change color */
+    color: black;
+}
+/*  */
+.widgets-control .control input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.widgets-control .control label{
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.widgets-control .control label::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border: 2px solid var(--grey-color);
+    margin-top: -9px; /* -ve 0.5*height */
+}
+.widgets-control .control label:hover::before{
+    border-color: var(--blue-alt-color);
+}
+.widgets-control .control label::after{
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;  /* to display the icon */
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    border-radius: 4px;
+    margin-top: -9px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+}
+/* when pressing the box => it fills with the content icon */
+.widgets-control .control input[type="checkbox"]:checked + label::after{
+    transform: scale(1);
+}
+/*  */
+.backup-control input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.backup-control .date label{
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.backup-control .date label::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color) ;
+    border-radius: 50%;
+    left: 0px;
+    top: 50%;
+    margin-top: -11px;  /* height 18 + 4px border (up&down) */
+}
+.backup-control .date label::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background : var(--blue-color);
+    border-radius: 50%;
+    left: 5px;
+    top: 5px;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.backup-control .date input[type="radio"]:checked + label::before{
+    border-color: var(--blue-color);
+}
+.backup-control .date input[type="radio"]:checked + label::after{
+    transform: scale(1);
+}
+
+.backup-control .servers{
+    border: 1px solid #eee;   
+    padding-top: 20px;
+}
+@media (max-width: 767px) {
+    .backup-control .servers{
+        flex-wrap: wrap;
+    }
+}
+.backup-control .servers .server{
+    border: 2px solid #eee;
+    position: relative;
+}
+.backup-control .servers label{
+    cursor: pointer;
+}
+.backup-control .servers input[type="radio"]:checked + .server{
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+/*  */
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch::before {
+    content: "\f00d";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    /* display flex for the ::before */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    left: 50px;
+    color: var(--blue-color);
+    content: "\f00c";
+}
+
+/* End Settings */
 
 /* Start Animations */
 @keyframes change-color {
-    from{
+    from {
         background-color: var(--blue-alt-color);
-    }   
-    to{
+    }
+
+    to {
         background-color: white;
-    } 
+    }
 }
+
 /* End Animations */

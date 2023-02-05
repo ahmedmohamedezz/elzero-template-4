@@ -8,8 +8,15 @@
  
 - border-top in an empty element will look like an arrow it the element is squared
 
+- inline-flex
+
+- :focus-within
+
+- center a div => top: 50%;           + ( margin:-0.5height   , or translate(50%)  )
+
 - if i want something to take all the remaining space ==> flex: 1;
 
+-  <label> must be ( display: block;    to respect margin )
 - heirarchy of the overriding styles ?
 - psuedo elements & classes ?
 - -webkit ?
