@@ -89,6 +89,9 @@
     padding: 20px;
 }
 
+.pt-10 {
+    padding-top: 10px;
+}
 .pt-15 {
     padding-top: 15px;
 }
@@ -173,6 +176,9 @@
 .border-ccc{
     border: 1px solid #ccc;
 }
+.border-eee{
+    border: 1px solid #eee;
+}
 .rad-6 {
     border-radius: 6px;
 }
@@ -189,7 +195,9 @@
 .p-relative {
     position: relative;
 }
-
+.p-absolute{
+    position: absolute;
+}
 /*      display & flex      */
 .d-block {
     display: block;
