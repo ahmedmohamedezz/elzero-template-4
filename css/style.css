@@ -870,6 +870,360 @@ ul {
     color: var(--blue-color);
 }
 /*  */
+
+
+/* End Settings */
+
+/* Start Profile Page */
+@media (max-width: 767px) {
+    .profile-page .overview{
+        flex-direction: column;
+    }
+}
+.profile-page .avatar-box{
+    width: 300px;
+}
+@media (min-width: 768px) {
+    .profile-page .avatar-box{
+        border-right: 1px solid #eee;
+    }
+}
+.profile-page .avatar-box > img{
+    width: 120px;
+    height: 120px;
+}
+.profile-page .avatar-box .level{
+    height: 6px;
+    /* overflow: hidden;  to make the borders of the span don't go outside the div */
+    margin: auto;  /*  to center the width 70 out of 100% */
+    width: 70%;
+}
+.profile-page .avatar-box .level span{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+}
+
+
+.profile-page .info-box .box{
+    flex-wrap: wrap;
+    border-bottom:  1px solid #eee;
+    transition: 0.3s;
+}
+.profile-page .info-box .box:hover{
+    background-color: #f9f9f9;
+}
+.profile-page .info-box .box > div{
+    min-width: 200px;
+    padding: 10px 0 0;
+}
+.profile-page .info-box h4{
+    font-weight: normal;
+}
+.profile-page .info-box .toggle-switch {
+    height: 20px;
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .toggle-switch {
+        margin: auto;
+    }
+}
+.profile-page .info-box .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+}
+.profile-page .info-box .toggle-checkbox:checked + .toggle-switch::before {
+    left: 62px;
+}
+
+
+/* Start my-skills ( profile page ) */
+@media (max-width: 767px) {
+    .profile-page .other-data{
+        flex-direction: column;
+    }
+}
+.profile-page .skills-card{
+    flex-grow: 1;
+}
+.profile-page .skills-card ul li{
+    padding: 15px 0px ;
+}
+.profile-page .skills-card ul li:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.profile-page .skills-card ul li span{
+    display: inline-flex;
+    padding: 4px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.profile-page .activities{
+    flex-grow: 2;
+}
+.profile-page .activity:not(:last-of-type){
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.profile-page .activity img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+@media (min-width: 768px) {
+    .profile-page .date{
+        margin-left: auto;
+        text-align: right;
+    }
+}
+@media (max-width: 767px) {
+    .profile-page .activity{
+        flex-direction: column;
+    }
+    .profile-page .activity img{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .profile-page .activity .date{
+        margin-top: 15px;
+    }
+}
+/* End my-skills ( profile page ) */
+/* End Profile Page */
+
+/* Start Projects Page */
+.projects-page{
+    grid-template-columns: repeat(auto-fill , minmax(500px,1fr));
+}
+@media (max-width: 767px) {
+    .projects-page{
+        grid-template-columns: minmax(200px,1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+.projects-page .project .date{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.projects-page .project h4{
+    font-weight: normal;  /* not bold */
+}
+.projects-page .project .team{
+    position: relative;
+    min-height: 80px;  /* to not let the image to be above this div  */
+}
+.projects-page .project .team a{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.projects-page .project .team a:nth-child(2){
+    left: 25px;
+}
+.projects-page .project .team a:nth-child(3){
+    left: 50px;
+}
+.projects-page .project .team a:nth-child(4){
+    left: 75px;
+}
+.projects-page .project .team a:nth-child(5){
+    left: 100px;
+}
+.projects-page .project .team a:hover{
+    z-index: 1;
+}
+.projects-page .project .team img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.projects-page .project .do{
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    padding-top: 15px;  /* under the border */
+    margin-top: 15px;   /* Above the border */
+}
+.projects-page .project .do span{
+    padding: 3px 8px;
+    margin-left: 5px;
+}
+@media (max-width: 767px) {
+    .projects-page .project .do{
+        flex-direction: column;
+    }
+    .projects-page .project .do span{
+        width: fit-content;
+    }
+    .projects-page .project .do span:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+}
+.projects-page .project .info{
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.projects-page .project .info .progress{
+    height: 8px;
+    width: 260px;
+    position: relative;
+    border-radius: 6px;
+}
+.projects-page .project .info .progress span{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    border-radius: 6px;
+}
+@media (max-width: 767px) {
+    .projects-page .project .info .progress{
+        width: 200px;
+    }
+}
+/* End Projects Page */
+
+/* Start Courses Page */
+.courses-page{
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+}
+@media (max-width: 767px) {
+    .courses-page{
+        grid-template-columns: minmax(200px,1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+.courses-page .course{
+    overflow: hidden;
+}
+.courses-page .course .cover{
+    max-width: 100%;
+}
+.courses-page .course .line{
+    position: absolute;
+    width: 100%;
+    border: 1px solid #eee;
+    top: 52px;
+    /* left: 20px; */
+}
+/* why is the image above the line without z-index ? 
+   because it's written before it in html           */ 
+.courses-page .course .instructor{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    border: 2px solid white;
+}
+.courses-page .course .description{
+    line-height: 1.6;
+}
+.courses-page .course .info{
+    border-top: 1px solid #eee;
+    font-size: 13px;
+
+}
+.courses-page .course .info .title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    top: -13px;
+    height: 27px;
+}
+/* End Courses Page */
+
+/* Start Friends Page */
+.friends-page{
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+}
+@media (max-width: 767px) {
+    .friends-page{
+        grid-template-columns: minmax(200px,1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+.friends-page .contact{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.friends-page .contact i{
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.friends-page .contact i:hover{
+    background-color: var(--blue-color);
+    color: white;
+}
+.friends-page .friend .icons{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.friends-page .friend .icons i{
+    margin-right: 5px;
+}
+.friends-page .friend .icons .vip{ 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    opacity: 0.2;
+}
+/* End Friends Page */
+
+/* Start Files Page */
+
+/* End Files Page */
+
+/* Start Plans Page */
+
+/* End Plans Page */
+
+
+/* Start Animations */
+@keyframes change-color {
+    from {
+        background-color: var(--blue-alt-color);
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+/* End Animations */
+
+/* Start Toggles */
 .toggle-checkbox {
     -webkit-appearance: none;
     appearance: none;
@@ -905,27 +1259,13 @@ ul {
     transition: 0.3s;
 }
 
-.toggle-checkbox:checked+.toggle-switch {
+.toggle-checkbox:checked + .toggle-switch {
     background-color: var(--blue-color);
 }
 
-.toggle-checkbox:checked+.toggle-switch::before {
+.toggle-checkbox:checked + .toggle-switch::before {
     left: 50px;
     color: var(--blue-color);
     content: "\f00c";
 }
-
-/* End Settings */
-
-/* Start Animations */
-@keyframes change-color {
-    from {
-        background-color: var(--blue-alt-color);
-    }
-
-    to {
-        background-color: white;
-    }
-}
-
-/* End Animations */
+/* End Toggles */

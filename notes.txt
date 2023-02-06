@@ -14,7 +14,9 @@
 
 - center a div => top: 50%;           + ( margin:-0.5height   , or translate(50%)  )
 
-- if i want something to take all the remaining space ==> flex: 1;
+- if i want something to take all the remaining space ==> flex: 1;  ( or margin: auto ;         , or flex-between )
+
+- control the size of buttons and icons through padding
 
 -  <label> must be ( display: block;    to respect margin )
 - heirarchy of the overriding styles ?
